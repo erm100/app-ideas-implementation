@@ -1,6 +1,5 @@
 import {StyleSheet, Dimensions} from 'react-native';
 import 'mobx-react-lite/batchingForReactNative';
-import {getStatusBarHeight} from 'react-native-status-bar-height';
 import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
@@ -44,9 +43,8 @@ export const createStyle = function() {
       minHeight: Dimensions.get('window').height,
     },
     inputWrapper: {
-      paddingTop: getStatusBarHeight(),
-      flex: 1,
-      minHeight: hp((190 / 465) * 100),
+      paddingTop: hp((10 / 465) * 100),
+      minHeight: hp((215 / 465) * 100),
       width: '100%',
     },
     inputInner: {
@@ -56,7 +54,7 @@ export const createStyle = function() {
     input: {
       fontFamily: 'Roboto',
       fontStyle: 'normal',
-      fontSize: hp((60 / 465) * 100),
+      fontSize: hp((40 / 465) * 100),
       lineHeight: hp((72 / 465) * 100),
       color: '#FFF5EE',
     },

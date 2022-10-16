@@ -1,4 +1,7 @@
 # Calculator
+
+[![Download](https://custom-icon-badges.herokuapp.com/badge/-Download-blue?style=for-the-badge&logo=download&logoColor=white "Download")](https://github.com/abscess/app-ideas-implementation/blob/master/calculator/calculator.apk)
+
 ![App](https://github.com/abscess/app-ideas-implementation/blob/master/calculator/.gitassets/app.png)
 
 ### Screens

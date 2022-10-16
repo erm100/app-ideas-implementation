@@ -1,11 +1,5 @@
 import React, {Component} from 'react';
-import {
-  View,
-  Text,
-  StatusBar,
-  TouchableOpacity,
-  ScrollView,
-} from 'react-native';
+import {View, Text, StatusBar, ScrollView} from 'react-native';
 
 import 'mobx-react-lite/batchingForReactNative';
 import {Observer} from 'mobx-react';
@@ -22,7 +16,6 @@ import {state} from './store';
 import {Context} from './context';
 import {createStyle} from './styles';
 
-import Vector from './assets/images/vector.svg';
 import Union from './assets/images/union.svg';
 
 class App extends Component {
@@ -63,12 +56,6 @@ class App extends Component {
                 </Observer>
               </View>
             </View>
-            <TouchableOpacity style={styles.downbtn}>
-              <Vector
-                width={wp((18 / 261) * 100)}
-                height={hp((7 / 465) * 100)}
-              />
-            </TouchableOpacity>
             <View style={styles.keyboard}>
               <View style={[styles.row, styles.row1]}>
                 <Button onPress={() => state.clear()}>C</Button>
@@ -119,7 +106,7 @@ class App extends Component {
               <View style={[styles.row, styles.row1]}>
                 <Button onPress={() => state.type('0')}>0</Button>
                 <Button onPress={() => state.type('.')}>.</Button>
-                <Button onPress={() => state.invert()}>+/-</Button>
+                <Button onPress={() => state.type('^')}>^</Button>
                 <Button
                   textColor={'#F4EBE5'}
                   style={styles.rowEnd1}

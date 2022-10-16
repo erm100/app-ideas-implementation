@@ -2,9 +2,8 @@ import {decorate, observable, action} from 'mobx';
 import mathString from 'math-string';
 
 class State {
-
-  constructor(state={}) {
-    this.input = state.input || "0";
+  constructor(state = {}) {
+    this.input = state.input || '0';
   }
 
   clear() {
@@ -21,6 +20,8 @@ class State {
 
   priority() {
     const selector = this.input.match(/[\(\)]/g);
+
+    let data = '';
 
     if (!selector || selector.pop() === ')') {
       data = '(';
@@ -51,14 +52,13 @@ class State {
   calculate() {
     try {
       const calc = mathString;
-      this.input = "" + calc(this.input);
+      this.input = '' + calc(this.input);
     } catch (ignore) {
       this.clear();
     }
   }
 
   invert() {
-
     if (this.input === '0') {
       return;
     }
@@ -70,7 +70,7 @@ class State {
       const length = this.input.length;
 
       const operator = this.input[length - lastOperator.length - 1];
-      
+
       let tmp;
       if (operator === '-') {
         tmp = this.input.slice(0, length - lastOperator.length - 1);
@@ -81,7 +81,6 @@ class State {
       } else {
         this.input = this.input.replace(lastOperator, `-${lastOperator}`);
       }
-
     }
   }
 }
