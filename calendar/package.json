@@ -19,7 +19,7 @@
     "@react-navigation/stack": "^5.2.11",
     "isarray": "^2.0.5",
     "isobject": "^4.0.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "react": "16.11.0",
     "react-native": "0.62.2",
     "react-native-events-calendar": "https://github.com/abscess/react-native-events-calendar.git",
